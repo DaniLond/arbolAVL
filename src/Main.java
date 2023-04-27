@@ -9,7 +9,7 @@ public class Main {
 
         ArrayList<Integer> numbers = new ArrayList<>();
 
-        for (int i=0; i < n; n++){
+        for (int i=0; i < n; i++){
             numbers.clear();
             String line = scanner.nextLine();
             String[] numbersString = line.split(" ");
@@ -22,7 +22,8 @@ public class Main {
                arbolAVL.insertar(numbers.get(1));
                arbolAVL.levelOrder();
             } else if (numbers.get(0) == 2) {
-
+                arbolAVL.eliminar(numbers.get(1));
+                arbolAVL.levelOrder();
             }
             System.out.println();
         }

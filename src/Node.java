@@ -1,21 +1,20 @@
-public class Node{
-    int data;
+public class Node<T> {
+    T data;
     int fe;
+    Node<T> hijoIzquierdo, hijoDerecho;
 
-    Node hijoIzquierdo, hijoDerecho;
-
-    public Node(int data) {
+    public Node(T data) {
         this.data = data;
         this.fe = 0;
-        this.hijoDerecho=null;
-        this.hijoIzquierdo= null;
+        this.hijoDerecho = null;
+        this.hijoIzquierdo = null;
     }
 
-    public int getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(T data) {
         this.data = data;
     }
 
@@ -27,19 +26,19 @@ public class Node{
         this.fe = fe;
     }
 
-    public Node getHijoIzquierdo() {
+    public Node<T> getHijoIzquierdo() {
         return hijoIzquierdo;
     }
 
-    public void setHijoIzquierdo(Node hijoIzquierdo) {
+    public void setHijoIzquierdo(Node<T> hijoIzquierdo) {
         this.hijoIzquierdo = hijoIzquierdo;
     }
 
-    public Node getHijoDerecho() {
+    public Node<T> getHijoDerecho() {
         return hijoDerecho;
     }
 
-    public void setHijoDerecho(Node hijoDerecho) {
+    public void setHijoDerecho(Node<T> hijoDerecho) {
         this.hijoDerecho = hijoDerecho;
     }
 }
